@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.view.animation.Animation;
+import at.markushi.ui.ActionView;
 import com.example.TestApp.view.SwitchButton;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
  */
 public class GroupMain extends GroupTest {
     private SwitchButton switchButton;
+
     @Override
     protected ViewGroup getContainer() {
         return (ViewGroup)(findViewById(R.id.content));

@@ -5,7 +5,7 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="7"/>
     <application android:label="@string/app_name">
-        <activity android:name=".Snake"
+        <activity android:name=".GroupMain"
                   android:launchMode="singleTask"
                   android:label="@string/app_name">
             <intent-filter>

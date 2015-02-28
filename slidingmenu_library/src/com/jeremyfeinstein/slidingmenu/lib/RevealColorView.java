@@ -1,4 +1,4 @@
-package at.markushi.ui;
+package com.jeremyfeinstein.slidingmenu.lib;
 
 import android.animation.Animator;
 import android.content.Context;
@@ -10,9 +10,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
+import com.jeremyfeinstein.slidingmenu.lib.util.BakedBezierInterpolator;
+import com.jeremyfeinstein.slidingmenu.lib.util.UiHelper;
 
-import at.markushi.ui.util.BakedBezierInterpolator;
-import at.markushi.ui.util.UiHelper;
 
 public class RevealColorView extends ViewGroup {
 

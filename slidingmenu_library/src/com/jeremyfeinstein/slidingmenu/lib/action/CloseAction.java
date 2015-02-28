@@ -1,4 +1,4 @@
-package at.markushi.ui.action;
+package com.jeremyfeinstein.slidingmenu.lib.action;
 
 public class CloseAction extends Action {
 

@@ -1,4 +1,4 @@
-package at.markushi.ui;
+package com.jeremyfeinstein.slidingmenu.lib;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -11,15 +11,10 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+import com.jeremyfeinstein.slidingmenu.lib.action.*;
+import com.jeremyfeinstein.slidingmenu.lib.util.BakedBezierInterpolator;
+import com.jeremyfeinstein.slidingmenu.lib.util.UiHelper;
 
-import at.markushi.ui.action.Action;
-import at.markushi.ui.action.BackAction;
-import at.markushi.ui.action.CloseAction;
-import at.markushi.ui.action.DrawerAction;
-import at.markushi.ui.action.LineSegment;
-import at.markushi.ui.action.PlusAction;
-import at.markushi.ui.util.BakedBezierInterpolator;
-import at.markushi.ui.util.UiHelper;
 
 /**
  * ActionView allows you to dynamically display action and automatically animate from one action to another.
@@ -36,12 +31,7 @@ import at.markushi.ui.util.UiHelper;
  *      app:av_action="drawer"/>
  * }</pre>
  *
- * In order to start a transition to another {@link at.markushi.ui.action.Action} call {@link #setAction(at.markushi.ui.action.Action)}
- *
- * @see at.markushi.ui.action.BackAction
- * @see at.markushi.ui.action.CloseAction
- * @see at.markushi.ui.action.DrawerAction
- * @see at.markushi.ui.action.PlusAction
+
  */
 public class ActionView extends View {
 
@@ -92,7 +82,7 @@ public class ActionView extends View {
 			return;
 		}
 		final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ActionView);
-		final int color = a.getColor(R.styleable.ActionView_av_color, 0xDDFFFFF);
+		final int color = a.getColor(R.styleable.ActionView_av_color, 0xffffffff);
 		final int actionId = a.getInt(R.styleable.ActionView_av_action, 0);
 		a.recycle();
 
@@ -155,7 +145,7 @@ public class ActionView extends View {
 	}
 
 	/**
-	 * Set the color used for drawing an {@link at.markushi.ui.action.Action}.
+	 *
 	 *
 	 * @param color
 	 */
@@ -175,10 +165,7 @@ public class ActionView extends View {
 	/**
 	 * Sets the new action. If an action was set before a transition will be started.
 	 *
-	 * @param action
-	 * @see #setAction(at.markushi.ui.action.Action, boolean)
-	 * @see #setAction(at.markushi.ui.action.Action, boolean, int)
-	 * @see #setAction(at.markushi.ui.action.Action, at.markushi.ui.action.Action, int, long)
+
 	 */
 	public void setAction(final Action action) {
 		setAction(action, true, ROTATE_CLOCKWISE);

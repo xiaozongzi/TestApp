@@ -1,4 +1,4 @@
-package at.markushi.ui.action;
+package com.jeremyfeinstein.slidingmenu.lib.action;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -32,7 +32,7 @@ public class LineSegment implements Parcelable {
 		this.indexes = in.createIntArray();
 	}
 
-	public static final Parcelable.Creator<LineSegment> CREATOR = new Parcelable.Creator<LineSegment>() {
+	public static final Creator<LineSegment> CREATOR = new Creator<LineSegment>() {
 		public LineSegment createFromParcel(Parcel source) {
 			return new LineSegment(source);
 		}

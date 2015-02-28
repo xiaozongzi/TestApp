@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package at.markushi.ui.util;
+package com.jeremyfeinstein.slidingmenu.lib.util;
 
 import android.view.animation.Interpolator;
 

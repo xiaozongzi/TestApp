@@ -1,4 +1,4 @@
-package at.markushi.ui.util;
+package com.jeremyfeinstein.slidingmenu.lib.util;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;

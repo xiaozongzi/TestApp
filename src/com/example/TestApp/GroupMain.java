@@ -5,8 +5,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.view.animation.Animation;
-import at.markushi.ui.ActionView;
+
 import com.example.TestApp.view.SwitchButton;
+import com.jeremyfeinstein.slidingmenu.lib.ActionView;
+import com.jeremyfeinstein.slidingmenu.lib.action.BackAction;
+import com.jeremyfeinstein.slidingmenu.lib.action.PlusAction;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -24,7 +27,7 @@ import java.util.ArrayList;
  */
 public class GroupMain extends GroupTest {
     private SwitchButton switchButton;
-
+     private ActionView actionView;
     @Override
     protected ViewGroup getContainer() {
         return (ViewGroup)(findViewById(R.id.content));
@@ -37,10 +40,12 @@ public class GroupMain extends GroupTest {
         findViewById(R.id.text1).setOnClickListener(listener);
         findViewById(R.id.text2).setOnClickListener(listener);
         findViewById(R.id.text3).setOnClickListener(listener);
-         String s="";
+        actionView= (ActionView) findViewById(R.id.action) ;
+
+        String s="";
 
         s="      dfdfdfdf";
-
+         actionView.setOnClickListener(listener );
 
 
     }
@@ -57,6 +62,10 @@ public class GroupMain extends GroupTest {
                      break;
                  case R.id.text3:
                      setMyContent(TestC.class);
+                     break;
+                 case R.id.action:
+                     actionView.setAction(new PlusAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+
                      break;
              }
         }

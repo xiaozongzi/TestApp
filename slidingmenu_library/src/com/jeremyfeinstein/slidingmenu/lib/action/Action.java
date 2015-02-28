@@ -1,14 +1,14 @@
-package at.markushi.ui.action;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.jeremyfeinstein.slidingmenu.lib.action;
 
 import android.graphics.Matrix;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * A action to be drawn by {@link at.markushi.ui.ActionView}
+ *
  */
 public class Action implements Parcelable {
 
@@ -92,7 +92,7 @@ public class Action implements Parcelable {
 		in.readTypedList(lineSegments, LineSegment.CREATOR);
 	}
 
-	public static final Parcelable.Creator<Action> CREATOR = new Parcelable.Creator<Action>() {
+	public static final Creator<Action> CREATOR = new Creator<Action>() {
 		public Action createFromParcel(Parcel source) {
 			return new Action(source);
 		}

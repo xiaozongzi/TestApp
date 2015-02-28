@@ -35,7 +35,7 @@ public class GroupMain extends GroupTest {
         findViewById(R.id.text1).setOnClickListener(listener);
         findViewById(R.id.text2).setOnClickListener(listener);
         findViewById(R.id.text3).setOnClickListener(listener);
-
+         String s="";
 
 
     }

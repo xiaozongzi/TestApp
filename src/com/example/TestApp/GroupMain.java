@@ -37,7 +37,7 @@ public class GroupMain extends GroupTest {
         findViewById(R.id.text3).setOnClickListener(listener);
          String s="";
 
-        s="      ";
+        s="      dfdfdfdf";
 
 
 

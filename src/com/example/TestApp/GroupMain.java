@@ -1,13 +1,17 @@
 package com.example.TestApp;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.view.animation.Animation;
 
+import android.widget.TextView;
 import com.example.TestApp.view.SwitchButton;
 import com.jeremyfeinstein.slidingmenu.lib.ActionView;
+import com.jeremyfeinstein.slidingmenu.lib.RevealColorView;
 import com.jeremyfeinstein.slidingmenu.lib.action.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,6 +23,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by yangyong
@@ -27,6 +32,9 @@ import java.util.ArrayList;
 public class GroupMain extends GroupTest {
     private SwitchButton switchButton;
      private ActionView actionView;
+    private RevealColorView revealColorView;
+    private TextView textView1;
+    private int[] color=new int[]{Color.BLUE,Color.RED,Color.GREEN,Color.BLACK,Color.MAGENTA};
     @Override
     protected ViewGroup getContainer() {
         return (ViewGroup)(findViewById(R.id.content));
@@ -40,12 +48,22 @@ public class GroupMain extends GroupTest {
         findViewById(R.id.text2).setOnClickListener(listener);
         findViewById(R.id.text3).setOnClickListener(listener);
         actionView= (ActionView) findViewById(R.id.action) ;
+        revealColorView= (RevealColorView) findViewById(R.id.revealView);
+        textView1= (TextView) findViewById(R.id.text_view_1);
+        actionView.setOnClickListener(listener );
+        revealColorView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    Random r=new Random();
+                    int i=r.nextInt(color.length);
+                    revealColorView.reveal(100,0, color[i],null);
+                }
 
-        String s="";
-
-        s="      dfdfdfdf";
-         actionView.setOnClickListener(listener );
-
+               // revealColorView.hide(0,0,Color.GREEN,null);
+                return true;
+            }
+        });
 
     }
     private void setAction(){

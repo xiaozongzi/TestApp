@@ -5,7 +5,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        android:background="@color/Black">
+        android:background="@color/white">
          <LinearLayout android:layout_width="fill_parent"
                        android:layout_height="45dp"
                  android:orientation="horizontal">
@@ -59,4 +59,17 @@
           android:padding="16dip"
           app:av_color="@color/white"
           app:av_action="back"/>
+    <com.jeremyfeinstein.slidingmenu.lib.RevealColorView
+            android:layout_width="match_parent"
+            android:id="@+id/revealView"
+
+            android:layout_height="200dp">
+               <TextView android:layout_width="wrap_content"
+                         android:text="55555"
+                         android:background="@color/white"
+                         android:layout_margin="10dp"
+                         android:id="@+id/text_view_1"
+                         android:layout_height="wrap_content"/>
+                                                         </com.jeremyfeinstein.slidingmenu.lib.RevealColorView>
+
 </LinearLayout>

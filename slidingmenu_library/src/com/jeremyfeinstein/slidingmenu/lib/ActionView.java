@@ -318,15 +318,20 @@ public class ActionView extends View {
 	}
 
 	private Action getActionFromEnum(int id) {
+        Action action;
 		switch (id) {
 		case 0:
-			return new DrawerAction();
+            return new DrawerAction();
+
 		case 1:
-			return new BackAction();
+            return new BackAction();
+
 		case 2:
-			return new CloseAction();
+            return new CloseAction();
+
 		case 3:
-			return new PlusAction();
+            return new PlusAction();
+
 		}
 
 		return null;

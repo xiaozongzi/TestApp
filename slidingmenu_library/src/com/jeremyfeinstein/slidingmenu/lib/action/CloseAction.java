@@ -3,6 +3,7 @@ package com.jeremyfeinstein.slidingmenu.lib.action;
 public class CloseAction extends Action {
 
 	public CloseAction() {
+        setActionId(2);
 		final float start = 0.239375f;
 		final float end = 1f - start;
 

@@ -3,7 +3,7 @@ package com.jeremyfeinstein.slidingmenu.lib.action;
 public class BackAction extends Action {
 
 	public BackAction() {
-
+        setActionId(1);
 		final float endX = 0.82f;
 		final float startX = 0.21875f;
 		final float center = 0.5f;

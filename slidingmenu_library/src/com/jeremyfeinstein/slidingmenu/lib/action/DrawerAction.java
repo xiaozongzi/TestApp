@@ -3,7 +3,7 @@ package com.jeremyfeinstein.slidingmenu.lib.action;
 public class DrawerAction extends Action {
 
 	public DrawerAction() {
-
+         setActionId(0);
 		final float startX = 0.1375f;
 		final float endX = 1f - startX;
 		final float endY = 0.707f;
@@ -18,4 +18,6 @@ public class DrawerAction extends Action {
 				// line 3
 				startX, endY, endX, endY,};
 	}
+
+
 }

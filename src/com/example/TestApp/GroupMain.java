@@ -8,8 +8,7 @@ import android.view.animation.Animation;
 
 import com.example.TestApp.view.SwitchButton;
 import com.jeremyfeinstein.slidingmenu.lib.ActionView;
-import com.jeremyfeinstein.slidingmenu.lib.action.BackAction;
-import com.jeremyfeinstein.slidingmenu.lib.action.PlusAction;
+import com.jeremyfeinstein.slidingmenu.lib.action.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -49,7 +48,23 @@ public class GroupMain extends GroupTest {
 
 
     }
-
+    private void setAction(){
+        Action action=actionView.getAction();
+         switch (action.getActionId()){
+             case 0:
+                 actionView.setAction(new BackAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+                 break;
+             case 1:
+                 actionView.setAction(new CloseAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+                 break;
+             case 2:
+                 actionView.setAction(new PlusAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+                 break;
+             case 3:
+                 actionView.setAction(new DrawerAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+                 break;
+         }
+    }
     private View.OnClickListener listener = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
@@ -64,7 +79,7 @@ public class GroupMain extends GroupTest {
                      setMyContent(TestC.class);
                      break;
                  case R.id.action:
-                     actionView.setAction(new PlusAction(), ActionView.ROTATE_COUNTER_CLOCKWISE);
+                     setAction();
 
                      break;
              }

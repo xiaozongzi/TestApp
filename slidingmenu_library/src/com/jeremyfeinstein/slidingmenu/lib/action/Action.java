@@ -14,7 +14,7 @@ public class Action implements Parcelable {
 
 	// 3 Lines * 4 points each
 	public static final int ACTION_SIZE = 12;
-
+    private int actionId;
 	// combination of x/y positions describing the lines
 	protected float[] lineData;
 	protected List<LineSegment> lineSegments = new ArrayList<LineSegment>(3);
@@ -101,4 +101,12 @@ public class Action implements Parcelable {
 			return new Action[size];
 		}
 	};
+
+    public int getActionId() {
+        return actionId;
+    }
+
+    public void setActionId(int actionId) {
+        this.actionId = actionId;
+    }
 }

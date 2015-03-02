@@ -3,7 +3,7 @@ package com.jeremyfeinstein.slidingmenu.lib.action;
 public class PlusAction extends Action {
 
 	public PlusAction() {
-
+        setActionId(3);
 		final float bottom = 76f / 96f;
 		final float top = 1f - bottom;
 		final float left = 20f / 96f;

@@ -5,8 +5,8 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="7"/>
     <application android:label="@string/app_name">
-        <activity android:name=".GroupMain"
-                  android:launchMode="singleTask"
+        <activity android:name=".MainActivity"
+
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,6 +17,11 @@
         <activity android:name=".TestA"/>
         <activity android:name=".TestB"/>
         <activity android:name=".TestC"/>
+        <activity android:name=".Sample1Activity"/>
+        <activity android:name=".Sample2Activity"/>
+        <activity android:name=".Sample3Activity"/>
+        <activity android:name=".Sample4Activity"/>
+        <activity android:name=".Sample5Activity"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest> 

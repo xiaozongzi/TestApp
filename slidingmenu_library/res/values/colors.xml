@@ -8,4 +8,8 @@
     <color name="cpb_green">#ff99cc00</color>
     <color name="cpb_green_dark">#ff6d9b00</color>
     <color name="cpb_white">@android:color/white</color>
+
+    <color name="menu_fragment_background">#B3000000</color>
+    <color name="menu_item_background">#f2f2f2</color>
+    <color name="divider_color">#b5b5b5</color>
 </resources>

@@ -14,6 +14,8 @@
         android:textSize="18sp"
         app:cpb_cornerRadius="48dp"
         app:cpb_iconComplete="@drawable/ic_action_accept"
+        app:cpb_textComplete="wancheng"
+
         app:cpb_iconError="@drawable/ic_action_cancel"
         app:cpb_textIdle="@string/Upload" />
 

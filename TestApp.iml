@@ -39,6 +39,12 @@
     <orderEntry type="jdk" jdkName="Android 4.4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="slidingmenu_library" />
+    <orderEntry type="module" module-name="generated-sources" />
+    <orderEntry type="module" module-name="library" />
+    <orderEntry type="module" module-name="sample" />
+    <orderEntry type="library" name="android-support-v4" level="application" />
+    <orderEntry type="library" name="android-support-v7-appcompat" level="application" />
+    <orderEntry type="library" name="nineoldandroids-2.4.0" level="application" />
   </component>
 </module>
 

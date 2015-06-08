@@ -3,8 +3,9 @@ package com.example.TestApp;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import com.example.TestApp.view.SwitchButton;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
  */
 public class GroupMain extends GroupTest {
     private SwitchButton switchButton;
+    private Animation animationOut ,animationIn;
+    TextView textView;
     @Override
     protected ViewGroup getContainer() {
         return (ViewGroup)(findViewById(R.id.content));
@@ -38,9 +41,30 @@ public class GroupMain extends GroupTest {
          String s="";
 
         s="      ";
+         textView= (TextView) findViewById(R.id.up_text);
 
+        textView.setOnClickListener(listener);
+        animationOut= AnimationUtils.loadAnimation(this,R.anim.fade_out);
+        animationIn=AnimationUtils.loadAnimation(this,R.anim.fade_in);
+        animationIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
 
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                textView.setText("11111");
+               textView.startAnimation(animationOut);
+            }
 
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
+        });
+     /*   textView.setAnimation(animation);
+        animation.start();*/
     }
 
     private View.OnClickListener listener = new View.OnClickListener(){
@@ -55,6 +79,11 @@ public class GroupMain extends GroupTest {
                      break;
                  case R.id.text3:
                      setMyContent(TestC.class);
+                     break;
+                 case R.id.up_text:
+
+                     textView.startAnimation(animationIn);
+
                      break;
              }
         }

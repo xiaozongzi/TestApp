@@ -14,8 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by yangyong
- * Date: 14-8-11  下午1:32
+ *
  */
 public abstract class GroupTest extends ActivityGroup {
 

@@ -9,7 +9,7 @@ import android.widget.Toast;
 import java.util.*;
 
 /**
- * Created by yangyong
+ *
  * Date: 14-8-11  下午2:17
  */
 public class TestA extends Activity {

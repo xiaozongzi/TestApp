@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 /**
- * Created by yangyong
+ *
  * Date: 14-8-11  下午2:19
  */
 public class TestC extends Activity {

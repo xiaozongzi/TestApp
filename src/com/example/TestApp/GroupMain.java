@@ -19,8 +19,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
- * Created by yangyong
- * Date: 14-8-11  下午1:49
+ *
  */
 public class GroupMain extends GroupTest {
     private SwitchButton switchButton;

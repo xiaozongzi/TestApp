@@ -1,7 +1,7 @@
 package com.example.TestApp;
 
 /**
- * Created by yangyong
+ *
  * Date: 14-1-16  下午4:50
  */
 public class Test {

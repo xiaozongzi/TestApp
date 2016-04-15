@@ -1,6 +1,7 @@
 package com.example.TestApp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -21,6 +22,16 @@ public class TestA extends Activity {
         doit("7-3*1+12-2*1+2");
         //Toast.makeText(this, String.valueOf("a".substring(0, 1)), 1).show();
         textView.setText("aaaaaaaa");
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(TestA.this,TestC.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.change).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

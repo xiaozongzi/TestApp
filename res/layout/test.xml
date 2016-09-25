@@ -7,7 +7,7 @@
               android:layout_height="fill_parent">
 <WebView android:layout_width="match_parent"
          android:id="@+id/webview"
-         android:visibility="gone"
+         android:visibility="visible"
          android:layout_height="match_parent">
 
 
